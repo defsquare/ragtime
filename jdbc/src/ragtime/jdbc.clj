@@ -20,7 +20,7 @@
 (defn- get-table-metadata* [^Connection conn]
   (with-open [tables (-> conn
                          (.getMetaData)
-                         (.getTables (.getCatalog conn) nil "%" nil))]
+                         (.getTables (.getCatalog conn) (.getSchema conn) "%" nil))]
     (sql/metadata-result tables)))
 
 (defn- get-table-metadata [db-spec]

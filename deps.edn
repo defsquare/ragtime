@@ -1,0 +1,3 @@
+{:paths     ["core/src" "jdbc/src"]
+ :deps {org.clojure/clojure {:mvn/version "1.5.1"}, org.clojure/java.jdbc {:mvn/version "0.5.8"}, resauce {:mvn/version "0.1.0"}}}
+
